@@ -31,7 +31,7 @@ pip install pandas numpy selenium scikit-learn konlpy matplotlib wordcloud
   - `job01_crawling_headline.py`: 네이버 뉴스에서 헤드라인들을 크롤링하는 스크립트
   - `job02_data_cleaned.py`: 크롤링된 데이터들을 정제하는 스크립트
   - `job03_wordcloud.py`: 워드 클라우드를 생성하는 스크립트. 빈도 수 기반
-  - `job04_if_idf_wordcloud.py`: IF-IDF 알고리즘으로 워드 클라우드를 생성하는 스크립트
+  - `job04_tf_idf_wordcloud.py`: IF-IDF 알고리즘으로 워드 클라우드를 생성하는 스크립트
   - `job05_news_recommendation.py`: IF-IDF 기반의 뉴스 추천 스크립트
 
 ## 프로젝트 진행 순서
