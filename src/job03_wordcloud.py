@@ -19,6 +19,7 @@ def create_wordcloud(data, title=None):
         max_words=200,
         max_font_size=50, 
         scale=3,
+        random_state=1
     ).generate_from_frequencies(data)
     
     plt.imshow(wordcloud, interpolation='bilinear')
