@@ -2,12 +2,12 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# TF-IDF로 벡터화한 뒤,
+# Tf-idf Vectorizer로 벡터화한 뒤,
 # 벡터간 내적 계산으로 코사인 유사도를 도출하여
 # 지금 내가 보고 있는 문서와 흡사한 문서를 추천해주는 실습입니다.
 
 # 데이터 로드
-data = pd.read_csv(r'..\crawling_data\naver_news_titles_cleaned20240703.csv')
+data = pd.read_csv(r'../crawling_data/naver_news_titles_cleaned20240703.csv')
 
 # tf-idf 벡터화
 vectorizer = TfidfVectorizer()

@@ -11,6 +11,9 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 import re  # 정규 표현식을 표현하기 위한 라이브러리
 import time  # sleep()을 사용하기 위한 라이브러리
 import sys  # 특정 매개변수와 함수를 사용하기 위한 시스템 라이브러리
+import os
+
+os.chdir('..')
 
 # 크롤링한 데이터를 저장할 디렉토리를 지정합니다.
 output_dir = "../crawling_data"

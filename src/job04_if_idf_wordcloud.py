@@ -7,7 +7,7 @@ from collections import Counter
 # if-idf로 중요한 단어만 wordcloud로 만들어보는 실습입니다.
 
 # 데이터 로드
-data = pd.read_csv(r'..\crawling_data\naver_news_titles_cleaned20240703.csv')
+data = pd.read_csv(r'../crawling_data/naver_news_titles_cleaned20240703.csv')
 
 # tf-idf 벡터화
 vectorizer = TfidfVectorizer()
@@ -17,7 +17,7 @@ tfidf_matrix = vectorizer.fit_transform(data['Title'])
 tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
 
 # 한글 폰트 경로 지정
-font_path = "C:\\Windows\\Fonts\\malgun.ttf"
+font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 
 # 단어클라우드 생성 함수
 def create_wordcloud(data, title=None):
@@ -27,7 +27,6 @@ def create_wordcloud(data, title=None):
         max_words=200,
         max_font_size=50, 
         scale=3,
-        random_state=1
     ).generate_from_frequencies(data)
     
     plt.imshow(wordcloud, interpolation='bilinear')

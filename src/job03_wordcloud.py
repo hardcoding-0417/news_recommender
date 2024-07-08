@@ -6,10 +6,10 @@ from collections import Counter
 # 단순히 단어의 등장빈도만으로 wordcloud를 만들어보는 스크립트입니다.
 
 # 데이터 로드
-data = pd.read_csv(r'..\crawling_data\naver_news_titles_cleaned20240703.csv')
+data = pd.read_csv(r'../crawling_data/naver_news_titles_cleaned20240703.csv')
 
 # 한글 폰트 경로 지정
-font_path = "C:\\Windows\\Fonts\\malgun.ttf"
+font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"  # 나눔고딕 폰트 경로. 없으면 다운로드 하세요.
 
 # 단어클라우드 생성 함수
 def create_wordcloud(data, title=None):
@@ -19,7 +19,6 @@ def create_wordcloud(data, title=None):
         max_words=200,
         max_font_size=50, 
         scale=3,
-        random_state=1
     ).generate_from_frequencies(data)
     
     plt.imshow(wordcloud, interpolation='bilinear')
