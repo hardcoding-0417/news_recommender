@@ -13,7 +13,7 @@ TF-IDF 알고리즘과 코사인 유사도 계산을 사용해
   
 ## 라이브러리 설치
 ```bash
-pip install pandas numpy selenium scikit-learn konlpy matplotlib wordcloud
+pip install pandas numpy selenium scikit-learn konlpy matplotlib wordcloud webdriver-manager
 ```
   
 - Pandas: 데이터 처리를 위해 필요합니다.
@@ -22,7 +22,15 @@ pip install pandas numpy selenium scikit-learn konlpy matplotlib wordcloud
 - Scikit-learn: TF-IDF 벡터화와 코사인 유사도 계산을 위해 사용됩니다.
 - Matplotlib: 결과를 시각화하기 위해 사용됩니다.
 - WordCloud: 워드 클라우드 생성을 위해 사용됩니다.
+- webdriver-manager : 크롬을 제어하기 위해 필요합니다.
   
+## 크롬 설치
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+```
+- Chrome: 웹 크롤링을 위해 필요합니다.
+
 ## 디렉토리 구조
 - `crawling_data/`: 웹 크롤링을 통해 수집된 뉴스 데이터가 저장되는 폴더입니다.
 - `models/`: 훈련된 모델과 토큰화 파일이 저장되는 폴더입니다.
